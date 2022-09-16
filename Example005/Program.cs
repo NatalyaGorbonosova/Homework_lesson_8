@@ -25,7 +25,6 @@ void FillMatrixSpirally(int[,] table)
             table[i, k] = number;
             number += 1;
         }
-        
     }
 }
 void PrintMatrix(int[,] table)
@@ -34,7 +33,8 @@ void PrintMatrix(int[,] table)
     {
         for(int j=0; j < table.GetLength(1); j++)
         {
-            Console.Write("{0}\t" + table[i, j]);
+            if(table[i, j] < 10) Console.Write("0" + table[i, j] + "\t");
+            else Console.Write(table[i, j] + "\t");
         }
         Console.WriteLine();
     }
